@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//www.powr.io/powr.js?external-type=html">
+			
+		</script> 
+<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="stylesheet" type="text/css" href="../work-page.css">
+<!-- <link rel="stylesheet" type="text/css" href="src/hover-min.css"> -->
+<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+
+<link href="https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<script src="../src/jquery.sticky.js"></script>
+
+<script src="../src/scrollreveal.min.js" type="text/javascript"></script>
+<!-- <script src="src/history.html4.js" type="text/javascript"></script> -->
+<script src="../general.js" type="text/javascript"></script>
+
+<!-- Contentful SDK -->
+<script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+	var client = contentful.createClient({
+	  space: 't9p4c9x03bar',
+	  accessToken: '13f8aeca80c777b1e2991e2cfe37175daba1fd946552e12e57bb93097c221bc4'
+	})
+
+
+	client.getEntry('4RL8BXXfewSEogyGsgI6YG')
+	.then(function (entry) {
+	  // logs the entry metadata
+	  console.log(entry.sys)
+
+	  // logs the field with ID title
+	  console.log(entry.fields.workTitle);
+	  console.log(entry.fields.description);
+
+
+	$(".title").html(entry.fields.workTitle);
+	$(".description").html(entry.fields.description);
+
+	})
+
+
+
+
+});
+
+
+
+
+</script>
+
+<title>jackie liu - art &middot; design &middot; code</title>
+
+
+
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	<div class="content-wrapper">
+
+
+	<div class="links nav is-sticky center-align" id="navbar">
+			<a class="nav-name">jackie liu</a>
+			<ul>	
+
+				<li><a href="#aboutSection" id="about"><span>about</span></a></li>
+				<li><a href="#workSection" id="work"><span>work</span></a></li>
+				<li><a href="#blogSection" id="blog"><span>blog</span></a></li>
+				<li><a href="#contactSection" id="contact"><span>get in touch</span></a></li>
+			</ul>
+		</div>
+
+		</section>
+		
+	<a id="workSection"></a>
+	<section>
+		<h2 class="title"></h2>
+		<div class="description"></div>
+
+
+	</div>
+</div>
+
+<script>ScrollReveal().reveal('.scroll-reveal',{ duration: 700, scale:.94 });</script>
+
+
+<script src="../src/rellax.min.js"></script>
+<script>
+  // Accepts any class name
+  
+</script>
+
+</body>
+
+</html>
