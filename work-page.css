@@ -110,12 +110,15 @@ img {
     font-size: 36px; }
 
 .details h4 {
-  margin-bottom: 0px;
-  font-size: 18px; }
-.details h4:first-child {
-  margin-top: 0px; }
+  margin-bottom: 10px;
+  font-size: 14px;
+  padding-bottom: 20px; }
 .details p, .details li {
-  margin: 0px; }
+  margin: 0px;
+  font-size: 14px;
+  line-height: 1.6; }
+.details img {
+  width: 70px; }
 
 .detail-section {
   margin-top: 40px;
@@ -180,9 +183,6 @@ img {
   margin-bottom: 0px;
   font-size: 24px; }
 
-.phone {
-  width: 28%; }
-
 .lovenotes-story .half {
   margin-top: 1%;
   margin-bottom: 1%; }
@@ -234,6 +234,9 @@ img {
     margin-right: auto;
     left: 0px; }
 
+  .details * {
+    padding-left: 10px;
+    padding-right: 10px; }
   .details h4 {
     margin-bottom: 0px;
     font-size: 18px; }

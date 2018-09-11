@@ -8,6 +8,7 @@ $light-pink: #FFECF4;
 $light-yellow: #FFFFE3;
 $med-yellow: #FCFF58;
 $grey: #BFBFBF;
+$light-grey: #B3B3B3;
 
 $plum: #23112d;
 $mobile-breakpoint: 800px;
@@ -43,7 +44,19 @@ $cyan-dark: #00A3BE;
 
 }
 
+.hero-arrow{
+	    font-size: 48px;
+	    left: 50%;
+	    right: 50%;
+	    top: 630px;
+	    position: absolute;
+	    opacity:0;
+	    transition: .6s opacity;
+}
+
 .bg-container{
+
+
 	width:100vw;
 	height:calc(100vh + 800);
 	position:absolute;
@@ -224,7 +237,7 @@ h4{
 
 section{
 	padding-top:60px;
-	padding-bottom:240px;
+	padding-bottom:60px;
 }
 .hero{
 	text-align:center;
@@ -268,9 +281,39 @@ a{
    /* border-style:dotted;*/
 }
 
+a.button{
+	padding:16px 24px;
+
+	background-color: $magenta;
+	color:white;
+	font-weight:bold;
+	font-size:24px;
+	font-family: 'Space Mono';
+}
+
+a.button:hover{
+	background-color: $magenta-dark;
+	color: white;
+}
+
+section#contact{
+	img{
+		position:relative;
+		bottom:0px;
+		transition:.3s all;
+	}
+}
+section#contact:hover{
+	img {
+		bottom:20px;
+	}
+
+}
+
 
 a:hover{
 	cursor:pointer;
+	color: $magenta-dark;
 }
 
 .grid-container.hover-all:hover{
@@ -346,7 +389,7 @@ $marginWidth: 8px;
 
 .fourth{
 	grid-column: span 3;
-	/*justify-self:center;*/
+	justify-self:center;
 }
 
 .full, .whole{
@@ -382,6 +425,10 @@ $marginWidth: 8px;
 .bg-img-grow:hover{
 	background-size: 102% auto;
 	background-position:center;
+}
+
+footer{
+	color:$light-grey;
 }
 
 
@@ -631,6 +678,8 @@ img{
 }
 
 
+
+
 /*mobile styles*/
 @media only screen and (max-width: $mobile-breakpoint) {
     body {
@@ -703,4 +752,8 @@ img{
 
 iframe {
     overflow: hidden;
+}
+
+.disabled{
+	pointer-events:none;
 }
