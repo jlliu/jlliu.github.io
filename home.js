@@ -123,6 +123,13 @@ $(document).ready(function(){
 
 		})
 
+		$("#contact img, #contact .button").hover(function(){
+			$("#contact img").addClass('hovered');
+			console.log('hover');
+		}, function(){
+			$("#contact img").removeClass('hovered');
+		});
+
 
 		// var animation = bodymovin.loadAnimation({
 		// 	container: document.getElementById('bm'),

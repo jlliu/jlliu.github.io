@@ -122,10 +122,10 @@ $bg-color: white;
 $dot-color:  #D9FEFF;
 
 
-// Dimensions
-$dot-size: 3px;
-$dot-space: 26px;
 
+html{
+	position:relative;
+}
 body {
 	/*background:#3e1576;*/
 /*	background:
@@ -159,15 +159,18 @@ body {
   }
   .r {
      color:#db00ff;
+     color: $magenta;
      left:-0.5px;
 
   }
   .g {
      color:#ecff00;
+     color: $yellow;
      animation-delay:-0.67s;
   }
   .b {
      color:#00f0ff;
+     color: $cyan;
      animation-delay:-0.33s;
      left:0.5px;
   }
@@ -302,13 +305,13 @@ section#contact{
 		bottom:0px;
 		transition:.3s all;
 	}
-}
-section#contact:hover{
-	img {
+	img.hovered{
+		
 		bottom:20px;
 	}
 
 }
+
 
 
 a:hover{
@@ -426,9 +429,24 @@ $marginWidth: 8px;
 	background-size: 102% auto;
 	background-position:center;
 }
-
+#contact{
+	h2{
+		color: $magenta;
+	}
+}
 footer{
-	color:$light-grey;
+	color:$magenta;
+
+
+}
+
+.footer-img{
+
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	z-index:-9000;
+	width:100vw;
 }
 
 

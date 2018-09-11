@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	$("body").fadeIn();
+
 	window.onscroll = function() {myFunction()};
 
 	var navbar = document.getElementById("navbar");
