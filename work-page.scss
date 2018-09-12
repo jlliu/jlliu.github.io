@@ -14,7 +14,8 @@ $dark-pink: #E74151;
 	}	
 }
 .work-page{
-	display:none ;
+	opacity:0;
+	transition:1s all;
 }
 
 p{

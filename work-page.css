@@ -3,7 +3,8 @@
   max-width: 700px; }
 
 .work-page {
-  display: none; }
+  opacity: 0;
+  transition: 1s all; }
 
 p, li {
   /*max-width:600px;*/

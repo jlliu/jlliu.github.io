@@ -1,5 +1,5 @@
 
-	console.log("this is external script");
+
 
 	function populatePage(entryId){
 		console.log('populate page');
@@ -37,10 +37,20 @@
 			$(".title").html(workTitle);
 			$(".description").html(description);
 
+
+
+			$(".work-page").css("opacity","1");
+			window.sr = new ScrollReveal();
+			window.sr.reveal('.scroll-reveal',{ duration: 700, scale:.94 });
+			console.log('new scrollreveal');
+
+
 		})
 
 
-		
+
+
+
 	};
 
 
