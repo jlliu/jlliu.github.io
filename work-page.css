@@ -2,9 +2,13 @@
   padding: 80px 0px;
   max-width: 700px; }
 
+.work-page {
+  display: none; }
+
 p, li {
   /*max-width:600px;*/
-  line-height: 2; }
+  line-height: 2;
+  z-index: 10; }
 
 b {
   font-weight: 500 !important; }

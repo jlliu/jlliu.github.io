@@ -61,10 +61,14 @@
 <script>
 
 $(document).ready(function(){
+	ScrollReveal().reveal('.scroll-reveal',{ duration: 700, scale:.94 });
 	console.log("this is script");
 	//Define entryID for each page
 	var entryId = '4RL8BXXfewSEogyGsgI6YG';
 	populatePage(entryId);
+
+	// $(".work-page").fadeIn(600);
+
 
 
 });
@@ -112,7 +116,7 @@ $(document).ready(function(){
 	
 	</div>
 	<div class="">
-		<img src="../img/gwcpreview.png" class="sr whole hover-raise gwc-preview">
+		<img src="../img/gwcpreview.png" class="scroll-reveal whole hover-raise gwc-preview">
 		<div class= "grid-container center-align"> 
 			<div class="fourth ">
 				<h4>work in</h4><p id="workType"></p>
@@ -148,7 +152,7 @@ $(document).ready(function(){
 	<img class="footer-img" src="../img/footer.svg">s
 </div>
 
-<script>ScrollReveal().reveal('.scroll-reveal',{ duration: 700, scale:.94 });</script>
+<script></script>
 
 
 <script src="../src/rellax.min.js"></script>

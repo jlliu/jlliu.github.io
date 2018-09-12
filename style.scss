@@ -68,6 +68,7 @@ $cyan-dark: #00A3BE;
 		mix-blend-mode:darken;
 		/*opacity:.5;*/
 		 animation:  giggle 1.6s ease infinite;
+		 z-index:-100;
 	}
 
 	.magenta{
@@ -395,6 +396,12 @@ $marginWidth: 8px;
 	justify-self:center;
 }
 
+
+.three-fourth{
+	grid-column: span 9;
+	
+}
+
 .full, .whole{
 	grid-column: span 12;
 	/*justify-self:center;*/
@@ -694,6 +701,7 @@ footer{
 img{
 	max-width:100%;
 }
+
 
 
 

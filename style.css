@@ -34,7 +34,8 @@
     position: absolute;
     mix-blend-mode: darken;
     /*opacity:.5;*/
-    animation: giggle 1.6s ease infinite; }
+    animation: giggle 1.6s ease infinite;
+    z-index: -100; }
   .bg-container .magenta {
     color: #FF00B7; }
   .bg-container .yellow {
@@ -255,6 +256,9 @@ h2.half {
 .fourth {
   grid-column: span 3;
   justify-self: center; }
+
+.three-fourth {
+  grid-column: span 9; }
 
 .full, .whole {
   grid-column: span 12;
