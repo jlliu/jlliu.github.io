@@ -260,6 +260,9 @@ h2.half {
 .three-fourth {
   grid-column: span 9; }
 
+.justify-center {
+  justify-self: center; }
+
 .full, .whole {
   grid-column: span 12;
   /*justify-self:center;*/ }
@@ -500,6 +503,10 @@ img {
     width: 100%;
     margin: auto; }
 
+  section {
+    padding-top: 24px;
+    padding-bottom: 24px; }
+
   section.hero {
     padding-top: 0px; }
 
@@ -509,11 +516,13 @@ img {
     animation: giggle 1.6s ease infinite;
     mix-blend-mode: multiply; }
 
-  .grid-container .last {
-    grid-row: 2; }
-  .grid-container .margin-left, .grid-container .margin-right {
-    margin-left: 0px;
-    margin-right: 0px; }
+  .grid-container {
+    margin: 24px 0px; }
+    .grid-container .last {
+      grid-row: 2; }
+    .grid-container .margin-left, .grid-container .margin-right {
+      margin-left: 0px;
+      margin-right: 0px; }
 
   .nav {
     text-align: left; }

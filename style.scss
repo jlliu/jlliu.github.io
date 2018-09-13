@@ -118,11 +118,6 @@ $cyan-dark: #00A3BE;
 	margin:auto;
 }
 
-// Colors
-$bg-color: white;
-$dot-color:  #D9FEFF;
-
-
 
 html{
 	position:relative;
@@ -400,6 +395,10 @@ $marginWidth: 8px;
 .three-fourth{
 	grid-column: span 9;
 	
+}
+
+.justify-center{
+	justify-self:center;
 }
 
 .full, .whole{
@@ -725,7 +724,10 @@ img{
     	width: 100%;
     	margin: auto;
     }
-
+    section{
+    	padding-top:24px;
+    	padding-bottom:24px;
+    }
     section.hero{
     	padding-top:0px;
     }
@@ -749,6 +751,7 @@ img{
 			margin-left:0px;
 			margin-right:0px;
 		}
+		margin:24px 0px;
 	}
 	.nav{
 		text-align:left;
