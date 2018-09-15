@@ -144,4 +144,15 @@ $(document).ready(function(){
 		// },false);
 
 
+	var username = "jackieleeliu";
+
+	var hostname = "gmail.com";
+
+	var linktext = username + "@" + hostname ;
+
+	var emailHTML = "<a class='button' href='mailto:" +username+"@"+hostname+"'>e-mail me</a>";
+	$(".emailWrapper").html(emailHTML);
+	// document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
+
+
 });
