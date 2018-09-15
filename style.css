@@ -533,7 +533,10 @@ img {
     .nav ul {
       padding-left: 0px; }
       .nav ul li {
-        margin: 8px; } }
+        margin: 8px; }
+    .nav .nav-wrapper {
+      width: 100%;
+      text-align: center; } }
 * {
   -webkit-overflow-scrolling: touch; }
 
