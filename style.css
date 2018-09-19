@@ -72,7 +72,7 @@ html {
   position: relative; }
 
 body {
-  width: 100%;
+  /*width:100%;*/
   /*background:#3e1576;*/
   /*	background:
   		linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
