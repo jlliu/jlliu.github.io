@@ -420,7 +420,7 @@ footer {
   font-size: 14px;
   /*font-weight:bold;*/
   margin: auto;
-  width: 100vw !important;
+  width: 100%;
   left: 0px;
   z-index: 9000 !important; }
   .nav .nav-wrapper {
@@ -466,7 +466,8 @@ footer {
   background-color: white;
   left: 0 !important;
   top: 0px;
-  position: fixed; }
+  position: fixed;
+  width: 100vw !important; }
   .is-sticky.nav .nav-name {
     display: inline-block;
     top: 16px; }
