@@ -420,7 +420,7 @@ footer {
   font-size: 14px;
   /*font-weight:bold;*/
   margin: auto;
-  width: 100% !important;
+  width: 100vw !important;
   left: 0px;
   z-index: 9000 !important; }
   .nav .nav-wrapper {
@@ -542,7 +542,7 @@ img {
       .nav ul li {
         margin: 8px; }
     .nav .nav-wrapper {
-      width: 100%;
+      /*width:100%;*/
       text-align: center; }
 
   .is-sticky.nav .nav-wrapper {
