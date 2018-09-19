@@ -540,12 +540,13 @@ img {
     .nav ul {
       padding-left: 0px; }
       .nav ul li {
-        margin: 8px; }
+        margin: 8px 4px; }
     .nav .nav-wrapper {
       /*width:100%;*/
       text-align: center; }
 
   .is-sticky.nav .nav-wrapper {
+    width: 100%;
     text-align: center; }
   .is-sticky.nav ul {
     float: none; } }
