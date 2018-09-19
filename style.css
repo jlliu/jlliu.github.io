@@ -17,8 +17,9 @@
 
 .hero-arrow {
   font-size: 48px;
-  left: 50%;
-  right: 50%;
+  left: calc( 50% - 8px);
+  /* left: 50%;
+   right: 50%;*/
   top: 630px;
   position: absolute;
   opacity: 0;
@@ -509,12 +510,17 @@ img {
 
   section.hero {
     padding-top: 0px; }
+    section.hero h2 {
+      margin: 24px auto; }
+
+  section#about {
+    padding-top: 100px; }
 
   .text > * {
     font-size: 60px;
     font-weight: bold;
-    animation: giggle 1.6s ease infinite;
-    mix-blend-mode: multiply; }
+    /* animation: giggle 1.6s ease infinite;
+     mix-blend-mode: multiply;*/ }
 
   .grid-container {
     margin: 24px 0px; }
@@ -536,7 +542,12 @@ img {
         margin: 8px; }
     .nav .nav-wrapper {
       width: 100%;
-      text-align: center; } }
+      text-align: center; }
+
+  .is-sticky.nav .nav-wrapper {
+    text-align: center; }
+  .is-sticky.nav ul {
+    float: none; } }
 * {
   -webkit-overflow-scrolling: touch; }
 
