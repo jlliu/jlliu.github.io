@@ -72,6 +72,7 @@ html {
   position: relative; }
 
 body {
+  width: 100%;
   /*background:#3e1576;*/
   /*	background:
   		linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
@@ -81,7 +82,7 @@ body {
   color: #23112d;
   font-family: 'Work Sans', sans-serif;
   overflow-x: hidden;
-  margin: 8px 16px; }
+  margin: 16px; }
 
 /*CRT text animation*/
 .text, .text > * {
