@@ -108,7 +108,7 @@ function setupApp(){
 
 
 function mouseDragged(){ 	
-	if (appActivated){
+	if (appActivated && allStylesReady){
 		strokeWeight(penWeight);
 		stroke(strokeColor);
 		line(mouseX, mouseY, pmouseX, pmouseY);
