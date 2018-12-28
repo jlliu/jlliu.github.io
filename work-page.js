@@ -1,6 +1,5 @@
 
 
-
 	function populatePage(entryId){
 		console.log('populate page');
 
@@ -12,22 +11,17 @@
 
 		client.getEntry(entryId)
 		.then(function (entry) {
-		  // logs the entry metadata
-		  console.log(entry.sys)
+			var workTitle = entry.fields.workTitle;
+			var workType = entry.fields.workType;
+			var doneFor = entry.fields.doneFor;
+			var toolsUsed = entry.fields.toolsUsed;
+			var timePeriod = entry.fields.timePeriod;
+			var description = marked(entry.fields.description);
+			var subheading = entry.fields.subheading;
 
-		  // logs the field with ID title
-		  console.log(entry.fields.workTitle);
-		  console.log(entry.fields.description);
 
-		  var workTitle = entry.fields.workTitle;
-		  var workType = entry.fields.workType;
-		  var doneFor = entry.fields.doneFor;
-		  var toolsUsed = entry.fields.toolsUsed;
-		  var timePeriod = entry.fields.timePeriod;
-
-		  console.log([workTitle,workType,doneFor,toolsUsed,timePeriod]);
-
-		  var description = marked(entry.fields.description);
+			var lastUpdatedDate = moment(entry.sys.updatedAt).format("M D Y");
+			var lastUpdatedDateFormatted = lastUpdatedDate.replace(/ /g," &middot; ")
 
 
 		  	$("#doneFor").html(doneFor);
@@ -36,19 +30,17 @@
 		  	$("#toolsUsed").html(toolsUsed);
 			$(".title").html(workTitle);
 			$(".description").html(description);
+			$(".heading-subheading").html(subheading);
+
+			$("#lastUpdated").html(lastUpdatedDateFormatted);
 
 
-
+			//Then reveal page once everything loaded
 			$(".work-page").css("opacity","1");
 			window.sr = new ScrollReveal();
 			window.sr.reveal('.scroll-reveal',{ duration: 700, scale:.94 });
-			console.log('new scrollreveal');
-
-
+			
 		})
-
-
-
 
 
 	};
