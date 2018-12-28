@@ -53,7 +53,6 @@ var setupDone = false;
 
 function setup() {
 
-
 	  var canvasP5 = createCanvas(200,200);
 	  canvasP5.parent('paint-UI');
 	  background(255);
@@ -78,12 +77,14 @@ var appActivated = false;
 
 function setupApp(){
 	//Once button clicked, wait on the p5 setup() to finish
+	$(".loadButton").html("Loading style 1/"+stylePaths.length+"...");
 	while (setupDone == false){
 		console.log("waiting on setup");
+		window.setTimeout(function(){}, 500);
 	}
 	//One that's done,set up the rest of the app
 
-	$(".loadButton").html("Loading style 1/"+stylePaths.length+"...");
+	
 	console.log("SETUP APP");
 	if (!appActivated){
 		console.log("setting up APP");
