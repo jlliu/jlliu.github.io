@@ -2,6 +2,12 @@ function makeSubpageElement(subpageName, subpageID){
 	var newLI = document.createElement("LI");
 	var newA =  document.createElement("a");
 	$(newA).html(subpageName)
+	if (subpageID !== "default"){
+		$(newA).attr("href","#"+subpageName.replace(" ","-"));
+	} else{
+		$(newA).attr("href","#");
+	}
+	
 	$(newLI).addClass("subpage subpageName");
 	$(newLI).attr("subpageID",subpageID);
 	newLI.appendChild(newA);
@@ -9,7 +15,13 @@ function makeSubpageElement(subpageName, subpageID){
 }
 
 
+
+var pageInitiallyPopulated = false;
+	
+
 	function populatePage(entryId){
+
+
 
 
 
@@ -53,7 +65,12 @@ function makeSubpageElement(subpageName, subpageID){
 				$(".title").html(workTitle);
 				$(".heading-subheading").html(subheading);
 				$("#coverPhoto").attr("src",coverphoto);
-				$("#nav-portfolioPageTitle").html(workTitle.replace("<br>"," "));
+				
+			}
+
+			function loadSubpage(subpageId){
+				var subpageDetail = subPages[subpageId];
+				$(".description").html(subpageDetail);
 			}
 
 
@@ -63,6 +80,10 @@ function makeSubpageElement(subpageName, subpageID){
 				var firstTab = makeSubpageElement(currentSubpageTitle,"default");
 				$(".nav-pagination").append(firstTab);
 				$(".nav-pagination li").addClass("active");
+
+
+				var urlSplit = document.URL.split("#");
+				var thisURLisSubpage = urlSplit[1];
 
 				//Store the subpage descriptions, keyed by IDs
 				var subPages = {};
@@ -74,6 +95,14 @@ function makeSubpageElement(subpageName, subpageID){
 					$(".nav-pagination").append(element);
 					console.log(subpagesList[i].fields.subpageDetail);
 					subPages[subpageID] = marked(subpagesList[i].fields.subpageDetail);
+					//First check if we actually need to default to this subpage according to URL!
+
+					if (thisURLisSubpage){
+						loadSubpage(subpageID);
+						$(".subpage").removeClass("active");
+						$(element).addClass("active");
+						pageInitiallyPopulated = true;
+					}
 				}
 
 				$(".subpage").click(function(e){
@@ -83,14 +112,17 @@ function makeSubpageElement(subpageName, subpageID){
 					if (subpageId == "default"){
 						loadMainPage();
 					} else {
-						var subpageDetail = subPages[subpageId];
-						$(".description").html(subpageDetail);
+						loadSubpage(subpageId);
 					}
 				});
+
 			}
 			
-			loadMainPage();
+			if (!pageInitiallyPopulated){
+				loadMainPage();
+			}
 
+			$("#nav-portfolioPageTitle").html(workTitle.replace("<br>"," "));
 			var lastUpdatedDate = moment(entry.sys.updatedAt).format("M D Y");
 			var lastUpdatedDateFormatted = lastUpdatedDate.replace(/ /g," &middot; ")
 
