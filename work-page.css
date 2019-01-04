@@ -6,6 +6,36 @@
   opacity: 0;
   transition: 1s all; }
 
+.description {
+  min-height: 100vh; }
+
+.nav {
+  /*height:90px !important;*/ }
+  .nav .nav-name {
+    font-size: 16px !important; }
+  .nav #nav-portfolioPageTitle {
+    top: 16px;
+    position: relative; }
+
+.nav-pagination {
+  /*	padding:0px;
+  	margin:0px;*/
+  /*float:none !important;*/ }
+  .nav-pagination li {
+    display: inline-block;
+    padding: 5px 0px 16px 0px;
+    margin: 0px 0px 0px 16px;
+    border-bottom: solid 2px white; }
+    .nav-pagination li a {
+      /*font-family: Work Sans !important;*/
+      color: #263130; }
+  .nav-pagination li:hover a {
+    color: #C10079; }
+  .nav-pagination li.active {
+    border-bottom: solid 2px #FF00B7; }
+    .nav-pagination li.active a {
+      color: #FF00B7; }
+
 p, li {
   /*max-width:600px;*/
   line-height: 2;
@@ -51,31 +81,6 @@ img {
 .left {
   float: left; }
 
-/*.third{
-	width:31%;
-	margin-left:1%;
-	margin-right:1%;
-	max-height:none;
-
-}
-.fourth{
-	width:22%;
-	margin-left:1%;
-	margin-right:1%;
-	max-height:none;
-}
-.two-third{
-	width:64%;
-	margin-left:1%;
-	margin-right:1%;
-	max-height:none;
-}
-.whole{
-	width:98%;
-	margin-left:1%;
-	margin-right:1%;
-	max-height:none;
-}*/
 .bigger {
   max-width: 140%;
   width: 140%;

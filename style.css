@@ -81,6 +81,7 @@ body {
   	background-size: $dot-space $dot-space;*/
   color: #23112d;
   font-family: 'Work Sans', sans-serif;
+  /*font-family: 'ABeeZee', sans-serif;*/
   overflow-x: hidden;
   margin: 16px; }
 
@@ -321,55 +322,6 @@ footer {
   z-index: -9000;
   width: 100vw; }
 
-/*
-
-
-
-.row{
-	overflow:auto;
-	padding:20px 0px;
-	margin:0px -8px !important;
-
-}
-.half{
-
-	width: calc(50% - 16px);
-	margin:36px $marginWidth;
-	display:inline-block;
-	vertical-align: top;
-
-}
-
-.row > *:last-child {
-	float:right;
-}
-
-
-.third{
-	width: calc(33.3333% - 16px);
-	margin:36px $marginWidth;
-	display:inline-block;
-	vertical-align: top;
-}
-
-.fourth {
-
-}
-
-.two-third{
-	width:  calc(66.6666%  - 16px);
-	margin:36px $marginWidth;
-	display:inline-block;
-	vertical-align: top;
-}
-
-
-.full{
-	width: calc(100% -  ($marginWidth*2)px);
-	margin:$marginWidth;
-	vertical-align: top;
-}
-*/
 .margin-right {
   margin-right: 24px; }
 
@@ -619,19 +571,29 @@ input:checked + .slider:before {
       margin-left: 0px;
       margin-right: 0px; }
 
-  .nav {
+  .nav:not(.singlePage) {
     text-align: left; }
-    .nav .nav-name {
+    .nav:not(.singlePage) #nav-portfolioPageTitle {
+      display: none !important; }
+    .nav:not(.singlePage) .nav-pagination {
+      margin-top: 6px; }
+    .nav:not(.singlePage) .nav-name {
       display: none !important;
       left: 0px;
       padding-left: 0px !important; }
-    .nav ul {
+    .nav:not(.singlePage) ul {
       padding-left: 0px; }
-      .nav ul li {
+      .nav:not(.singlePage) ul li {
         margin: 8px 4px; }
-    .nav .nav-wrapper {
+    .nav:not(.singlePage) .nav-wrapper {
       /*width:100%;*/
       text-align: center; }
+
+  .nav.singlePage .nav-wrapper {
+    white-space: nowrap;
+    overflow: hidden;
+    height: 65px;
+    /*width:800px;*/ }
 
   .is-sticky.nav .nav-wrapper {
     width: 100%;

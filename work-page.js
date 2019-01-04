@@ -1,6 +1,19 @@
+function makeSubpageElement(subpageName, subpageID){
+	var newLI = document.createElement("LI");
+	var newA =  document.createElement("a");
+	$(newA).html(subpageName)
+	$(newLI).addClass("subpage subpageName");
+	$(newLI).attr("subpageID",subpageID);
+	newLI.appendChild(newA);
+	return newLI;
+}
 
 
 	function populatePage(entryId){
+
+
+
+
 		console.log('populate page');
 
 		var client = contentful.createClient({
@@ -11,6 +24,8 @@
 
 		client.getEntry(entryId)
 		.then(function (entry) {
+
+
 			var workTitle = entry.fields.workTitle;
 			var workType = entry.fields.workType;
 			var doneFor = entry.fields.doneFor;
@@ -18,22 +33,69 @@
 			var timePeriod = entry.fields.timePeriod;
 			var description = marked(entry.fields.description);
 			var subheading = entry.fields.subheading;
+			var subpagesList = entry.fields.subpages;
 
+
+
+
+			if (entry.fields.coverphoto){
+				var coverphoto = entry.fields.coverphoto.fields.file.url;
+				$("#coverPhoto").attr("src",coverphoto);
+			}
+
+
+			function loadMainPage(){
+				$(".description").html(description);
+			  	$("#doneFor").html(doneFor);
+			  	$("#workType").html(workType);
+			  	$("#timePeriod").html(timePeriod);
+			  	$("#toolsUsed").html(toolsUsed);
+				$(".title").html(workTitle);
+				$(".heading-subheading").html(subheading);
+				$("#coverPhoto").attr("src",coverphoto);
+				$("#nav-portfolioPageTitle").html(workTitle.replace("<br>"," "));
+			}
+
+
+			//Check if the page has multiple subpages, then build page accordingly
+			if (subpagesList){
+				var currentSubpageTitle = entry.fields.thisSubpageName;
+				var firstTab = makeSubpageElement(currentSubpageTitle,"default");
+				$(".nav-pagination").append(firstTab);
+				$(".nav-pagination li").addClass("active");
+
+				//Store the subpage descriptions, keyed by IDs
+				var subPages = {};
+				for (var i=0;i<subpagesList.length;i++){
+					console.log(subpagesList[i]);
+					var subpageTitle = subpagesList[i].fields.subpageTitle;
+					var subpageID = subpagesList[i].sys.id;
+					var element = makeSubpageElement(subpageTitle,subpageID);
+					$(".nav-pagination").append(element);
+					console.log(subpagesList[i].fields.subpageDetail);
+					subPages[subpageID] = marked(subpagesList[i].fields.subpageDetail);
+				}
+
+				$(".subpage").click(function(e){
+					var subpageId = e.currentTarget.attributes.subpageid.value;
+					$(".subpage").removeClass("active");
+					$(e.currentTarget).addClass("active");
+					if (subpageId == "default"){
+						loadMainPage();
+					} else {
+						var subpageDetail = subPages[subpageId];
+						$(".description").html(subpageDetail);
+					}
+				});
+			}
+			
+			loadMainPage();
 
 			var lastUpdatedDate = moment(entry.sys.updatedAt).format("M D Y");
 			var lastUpdatedDateFormatted = lastUpdatedDate.replace(/ /g," &middot; ")
 
 
-		  	$("#doneFor").html(doneFor);
-		  	$("#workType").html(workType);
-		  	$("#timePeriod").html(timePeriod);
-		  	$("#toolsUsed").html(toolsUsed);
-			$(".title").html(workTitle);
-			$(".description").html(description);
-			$(".heading-subheading").html(subheading);
-
 			$("#lastUpdated").html(lastUpdatedDateFormatted);
-
 
 			//Then reveal page once everything loaded
 			$(".work-page").css("opacity","1");
@@ -46,5 +108,5 @@
 	};
 
 
-
+//Click events for 
 
