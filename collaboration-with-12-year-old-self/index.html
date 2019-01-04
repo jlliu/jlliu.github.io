@@ -17,12 +17,8 @@
 <link rel="stylesheet" type="text/css" href="../style.css">
 <link rel="stylesheet" type="text/css" href="../work-page.css">
 
-<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="shortcut icon" type="image/png" href="favicon.png"/>
 
 
 <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i" rel="stylesheet">
@@ -37,10 +33,9 @@
 
 
 
-   <script src="libraries/ml5.min.js"></script>
-
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.dom.min.js"></script>
+<script src="libraries/ml5.min.js"></script>
+<script src="libraries/p5.min.js"></script>
+<script src="libraries/p5.dom.min.js"></script>
 
 
 
@@ -54,7 +49,7 @@
 
 
 
-
+<link rel="shortcut icon" type="image/png" href="../favicon/favicon.png"/>
 <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
@@ -80,17 +75,12 @@ $(document).ready(function(){
 	//Define entryID for each page
 	var entryId = '1txz76jlqY8Sc2K6guKu42';
 	populatePage(entryId);
-
-
 });
-
 
 </script>
 
+
 <title>jackie liu - art &middot; design &middot; code</title>
-
-
-
 
 </head>
 
@@ -98,45 +88,30 @@ $(document).ready(function(){
 <body class="work-page collaboration-12-year-old-self">
 	<div id="wrap">
 	<div class="content-wrapper">
-
-
-	<div class="links nav is-sticky" id="navbar">
+	<div class="links nav is-sticky singlePage" id="navbar">
 		<div class="nav-wrapper">
-		<a class="nav-name" href="/">jackie liu</a>
-		<ul>	
-
-			<li><a href="../#aboutSection" id="about"><span>about</span></a></li>
-			<li><a href="../#workSection" id="work"><span>work</span></a></li>
-			<!-- <li><a href="#blogSection" id="blog"><span>blog</span></a></li> -->
-			<li><a href="../#contactSection" id="contact"><span>get in touch</span></a></li>
+		<a class="nav-name" href="/"><i class="fas fa-long-arrow-alt-left"></i> jackie liu &middot; </a><span id="nav-portfolioPageTitle"></span>
+		<ul class="nav-pagination">
 		</ul>
 		</div>
 	</div>
-
-	<a id="workSection"></a>
 	<section>
 
 	<div class="center-align">
 	<h1 class="title"></h1>
 
-
-
-
-
 	<div class="background drawing-bg "></div>
 	<div class="heading-wrapper">
 		<div class="heading">
-			<h4 class="heading-subheading">drawing performance &middot; machine learning experiment</h4>
+			<h4 class="heading-subheading"></h4>
 			
 		</div>
 		<!-- <div class="top-border"></div> -->
 	</div>
 	</div>
 
-
-
 	<div class="">
-			<img src="../img/drawing-performance.png" class="three-fourth-center box-shadow scroll-reveal">
+		<img id="coverPhoto" src="" class="three-fourth-center box-shadow scroll-reveal">
 		<div class= "grid-container center-align details"> 
 			<div class="fourth ">
 				<h4>work in</h4><p id="workType"></p>
@@ -152,71 +127,53 @@ $(document).ready(function(){
 			<h4><a target="_blank" href="https://github.com/jlliu/collaboration-12-year-old-self"><div>link to source code-></div><img src="../img/githublogo.png"></a></h4>
 			</div>
 		</div>
-		
 	</div>
 
 	<div class="description">
-		
 	</div>
 	
 	<div class="app-container">
-<button class="loadButton" onclick="setupApp()">LOAD DRAWING APP</button>
-	<div id="drawingApp">
-		<div class="app-overlay">
-			
-		</div>
+	<button class="loadButton" onclick="setupApp()">LOAD DRAWING APP</button>
+		<div id="drawingApp">
+			<div class="app-overlay"></div>
 
-      <img id="resultImage" src="">
+	      <img id="resultImage" src="">
 
-    <div class="grid-container">
-    	<div class="full "><h4>1 | SELECT A STYLE FROM MY CHILDHOOD ART</h4></div>
-     	<div class="sixth styles"><img id="0" class="selected" src="originals/sakura2.jpg"></div>
-     	<div class="sixth styles"><img id="1" src="originals/roses.jpg"></div>
-     	<div class="sixth styles"><img id="2"src="originals/zuko.jpg"></div>
-     	<div class="sixth styles"><img id="3"src="originals/spring.jpg"></div>
-     	<div class="sixth styles"><img id="4"src="originals/sasuke.jpg"></div>
-     	<div class="sixth styles"><img id="5"src="originals/katara.jpg"></div>
-    	 <div class="full">
-    <h4>2 | DRAW HERE <i class="fas fa-arrow-down"></i></h4>
+		    <div class="grid-container">
+		    	<div class="full"><h4>1 | SELECT A STYLE FROM MY CHILDHOOD ART</h4></div>
+		     	<div class="sixth styles"><img id="0" class="selected" src="originals/sakura2.jpg"></div>
+		     	<div class="sixth styles"><img id="1" src="originals/roses.jpg"></div>
+		     	<div class="sixth styles"><img id="2"src="originals/zuko.jpg"></div>
+		     	<div class="sixth styles"><img id="3"src="originals/spring.jpg"></div>
+		     	<div class="sixth styles"><img id="4"src="originals/sasuke.jpg"></div>
+		     	<div class="sixth styles"><img id="5"src="originals/katara.jpg"></div>
+		    	 <div class="full">
+		    <h4>2 | DRAW HERE <i class="fas fa-arrow-down"></i></h4>
 
 
-</div>
-	<div id="paint-UI" class="half">
-		<div class="paint-tools">
-		<button id="pen" class="paint-button draw active"  onclick="pen()"><i class="fas fa-pencil-alt"></i></button>
+			</div>
+			<div id="paint-UI" class="half">
+				<div class="paint-tools">
+				<button id="pen" class="paint-button draw active"  onclick="pen()"><i class="fas fa-pencil-alt"></i></button>
+				<button id="erase" class="paint-button erase" onclick="erase()"><i class="fas fa-eraser"></i></button>
+				</div>
+		    	 
+			</div>
 
-		<button id="erase" class="paint-button erase" onclick="erase()"><i class="fas fa-eraser"></i></button>
-		</div>
-    	 
+			<div class="imageContainer half">
+		        <img id="styledImage" src=""  ><!-- <p>Styled Drawing</p> -->
+		        <br>
+		        <div id="textarea" class="padding-top-20">The styled drawing will appear above.</div>
+		        <div class="padding-top-20">
+		        <label class="switch">
+			    <input type="checkbox" id="styleCheckbox" checked>
+			    <span class="slider round"></span>
+				</label>&nbsp;&nbsp;<div class="switch-label">Activate style transfer</div></div>
+
+		     </div>
+		     </div>
+		 </div>
 	</div>
-
-	<div class="imageContainer half">
-	
-        
-        <img id="styledImage" src=""  ><!-- <p>Styled Drawing</p> -->
-        <br>
-        <div id="textarea" class="padding-top-20">The styled drawing will appear above.</div>
-        <div class="padding-top-20">
-        <label class="switch">
-	  <input type="checkbox" id="styleCheckbox" checked>
-	  <span class="slider round"></span>
-	</label>&nbsp;&nbsp;<div class="switch-label">Activate style transfer</div></div>
-
-     </div>
-     
-     
-<!--      <div class=" styles"> -->
-<!-- 		<div class="full "><h3>SELECT A STYLE FROM MY CHILDHOOD ART</h3></div>
-     	<div class="sixth styles"><img id="0" class="selected" src="originals/sakura2.jpg"></div>
-     	<div class="sixth styles"><img id="1" src="originals/roses.jpg"></div>
-     	<div class="sixth styles"><img id="2"src="originals/zuko.jpg"></div>
-     	<div class="sixth styles"><img id="3"src="originals/spring.jpg"></div>
-     	<div class="sixth styles"><img id="4"src="originals/sasuke.jpg"></div>
-     	<div class="sixth styles"><img id="5"src="originals/katara.jpg"></div> -->
-<!--      </div> -->
-     </div>
- </div>
-</div>
 	</section>
 
 

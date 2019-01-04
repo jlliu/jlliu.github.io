@@ -498,7 +498,7 @@ img {
   transition: .4s; }
 
 input:checked + .slider {
-  background-color: #FF2E84; }
+  background-color: #FF00B7; }
 
 /*input:focus:checked + .slider {
   box-shadow: 0 0 1px $hot-pink;

@@ -281,7 +281,7 @@ img {
     margin: auto;
     top: 380px;
     width: 300px;
-    background-color: #FF2E84;
+    background-color: #FF00B7;
     border-radius: 100px;
     padding: 15px 24px;
     vertical-align: middle;
@@ -297,9 +297,9 @@ img {
     opacity: .3;
     pointer-events: none; }
     .collaboration-12-year-old-self .app-container #drawingApp canvas {
-      -webkit-box-shadow: 0px 0px 0px 2px #FFAED0;
-      -moz-box-shadow: 0px 0px 0px 2px #FFAED0;
-      box-shadow: 0px 0px 0px 2px #FFAED0;
+      -webkit-box-shadow: 0px 0px 0px 2px #FF00B7;
+      -moz-box-shadow: 0px 0px 0px 2px #FF00B7;
+      box-shadow: 0px 0px 0px 2px #FF00B7;
       display: inline; }
     .collaboration-12-year-old-self .app-container #drawingApp .sixth.styles {
       margin-bottom: 0px; }
@@ -321,7 +321,7 @@ img {
     .collaboration-12-year-old-self .app-container #drawingApp button.active {
       opacity: 1;
       background-color: #FFECF4;
-      color: #FF2E84; }
+      color: #FF00B7; }
     .collaboration-12-year-old-self .app-container #drawingApp .imageContainer {
       display: inline-block; }
     .collaboration-12-year-old-self .app-container #drawingApp #paint-UI {
@@ -341,11 +341,11 @@ img {
     .collaboration-12-year-old-self .app-container #drawingApp #resultImage {
       display: none; }
     .collaboration-12-year-old-self .app-container #drawingApp .selected {
-      -webkit-box-shadow: 0px 0px 0px 4px #ff2e84;
-      -moz-box-shadow: 0px 0px 0px 4px #ff2e84;
-      box-shadow: 0px 0px 0px 4px #ff2e84; }
+      -webkit-box-shadow: 0px 0px 0px 4px #FF00B7;
+      -moz-box-shadow: 0px 0px 0px 4px #FF00B7;
+      box-shadow: 0px 0px 0px 4px #FF00B7; }
     .collaboration-12-year-old-self .app-container #drawingApp #textarea {
-      color: #FF2E84;
+      color: #FF00B7;
       font-family: "Space Mono";
       width: 390px;
       border: none; }
