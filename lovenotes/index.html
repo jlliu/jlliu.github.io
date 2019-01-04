@@ -73,7 +73,8 @@
 <script>
 
 $(document).ready(function(){
-	console.log("this is script");
+
+
 	//Define entryID for each page
 	var entryId = '6Fxt4NpDBCOcy6kUQmu8So';
 	populatePage(entryId);
@@ -99,15 +100,10 @@ $(document).ready(function(){
 	<div class="content-wrapper">
 
 
-	<div class="links nav is-sticky" id="navbar">
+	<div class="links nav singlePage is-sticky" id="navbar">
 		<div class="nav-wrapper">
-		<a class="nav-name" href="/">jackie liu</a>
-		<ul>	
-
-			<li><a href="../#aboutSection" id="about"><span>about</span></a></li>
-			<li><a href="../#workSection" id="work"><span>work</span></a></li>
-			<!-- <li><a href="#blogSection" id="blog"><span>blog</span></a></li> -->
-			<li><a href="../#contactSection" id="contact"><span>get in touch</span></a></li>
+		<a class="nav-name" href="/"><i class="fas fa-long-arrow-alt-left"></i> jackie liu &middot; </a><span id="nav-portfolioPageTitle"></span>
+		<ul class="nav-pagination">
 		</ul>
 		</div>
 	</div>
@@ -118,15 +114,10 @@ $(document).ready(function(){
 	<div class="center-align">
 	<h1 class="title"></h1>
 
-
-
-
-
 	<div class="background lovenotes-bg"></div>
 	<div class="heading-wrapper">
 		<div class="heading">
 			<h4 class="heading-subheading red">data visualization project &middot; interactive art</h4>
-			
 		</div>
 		<!-- <div class="top-border"></div> -->
 	</div>
@@ -176,13 +167,6 @@ $(document).ready(function(){
 </div>
 
 <script>ScrollReveal().reveal('.scroll-reveal',{ duration: 700, scale:.94 });</script>
-
-
-<script src="../src/rellax.min.js"></script>
-<script>
-  // Accepts any class name
-  
-</script>
 
 </body>
 
