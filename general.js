@@ -19,15 +19,12 @@ $(document).ready(function(){
 		console.log("nav name clicked");
 		$(window).scrollTop(0);
 	})
-
-
-	// var sticky = new Sticky('.nav',{"data-sticky-class":"is-sticky"} );
-
-
-
-
-		
-
-
-
 });
+
+
+Vue.component('workpage-footer', {
+  props: ["date"],
+  template: '<footer><p class="center-align">made with <i class="fas fa-heart"></i> by jackie liu &middot; last updated on <span v-html=date></span><br><a  href="mailto:jackieleeliu@gmail.com">contact: jackieleeliu@gmail.com</a></p></footer>'
+});
+
+
