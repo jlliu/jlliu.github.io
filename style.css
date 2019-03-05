@@ -1,3 +1,9 @@
+.button {
+  padding: 20px 10px;
+  background-color: #FF00B7;
+  color: white;
+}
+
 .text-pink {
   color: #db00ff;
   color: #00FFFF;
@@ -30,12 +36,20 @@
   transition: 0.6s opacity;
 }
 
+.condensed {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+}
+
 .bg-container {
   width: 100vw;
-  height: calc(100vh + 800);
+  /*height:calc(100vh + 800px);*/
   position: absolute;
   left: 0px;
   top: 0px;
+  height: 1400px;
+  overflow-x: hidden;
 }
 .bg-container .fas, .bg-container .far {
   position: absolute;
@@ -88,6 +102,7 @@
 
 html {
   position: relative;
+  overflow-x: visible;
 }
 
 body {
@@ -137,6 +152,7 @@ body {
 }
 
 .text-wrapper {
+  /*overflow:hidden;*/
   height: 180px;
 }
 
@@ -485,8 +501,10 @@ footer {
 }
 .nav .nav-wrapper {
   width: 80%;
+  height: 100%;
   max-width: 800px;
   margin: auto;
+  position: relative;
 }
 .nav ul {
   display: inline-block;
@@ -540,7 +558,7 @@ footer {
   left: 0 !important;
   top: 0px;
   position: fixed;
-  width: 100vw !important;
+  /*width:100vw !important;*/
 }
 .is-sticky.nav .nav-name {
   display: inline-block;
@@ -660,12 +678,23 @@ input:checked + .slider:before {
   }
 }
 @media only screen and (max-width: 800px) {
+  .hide-for-mobile {
+    display: none !important;
+  }
+
   body {
+    /*width:100%;*/
     /*background-color: lightblue;*/
+    width: calc(100% - 32px);
+  }
+
+  a.button {
+    font-size: 18px;
   }
 
   .thumbnail {
-    height: 260px;
+    /*height:400px;*/
+    width: 100%;
   }
 
   .third, .half, .full, .whole, .two-third, .five-twelth, .seven-twelth, .three-fourth {
@@ -696,7 +725,7 @@ input:checked + .slider:before {
   }
 
   .text > * {
-    font-size: 60px;
+    font-size: 54px;
     font-weight: bold;
     /* animation: giggle 1.6s ease infinite;
      mix-blend-mode: multiply;*/
@@ -713,27 +742,31 @@ input:checked + .slider:before {
     margin-right: 0px;
   }
 
-  .nav:not(.singlePage) {
+  .nav:not(.singlePage, .project-page) {
     text-align: left;
   }
-  .nav:not(.singlePage) #nav-portfolioPageTitle {
+  .nav:not(.singlePage, .project-page) #nav-portfolioPageTitle {
     display: none !important;
+    /*background-color:blue;*/
   }
-  .nav:not(.singlePage) .nav-pagination {
-    margin-top: 6px;
+  .nav:not(.singlePage, .project-page) .nav-pagination {
+    position: absolute;
+    bottom: 0px !important;
+    margin-bottom: 0px;
+    right: 0px;
   }
-  .nav:not(.singlePage) .nav-name {
+  .nav:not(.singlePage, .project-page) .nav-name {
     display: none !important;
     left: 0px;
     padding-left: 0px !important;
   }
-  .nav:not(.singlePage) ul {
+  .nav:not(.singlePage, .project-page) ul {
     padding-left: 0px;
   }
-  .nav:not(.singlePage) ul li {
+  .nav:not(.singlePage, .project-page) ul li {
     margin: 8px 4px;
   }
-  .nav:not(.singlePage) .nav-wrapper {
+  .nav:not(.singlePage, .project-page) .nav-wrapper {
     /*width:100%;*/
     text-align: center;
   }
@@ -745,12 +778,16 @@ input:checked + .slider:before {
     /*width:800px;*/
   }
 
+  .is-sticky.nav {
+    /*height:96px;*/
+  }
   .is-sticky.nav .nav-wrapper {
-    width: 100%;
-    text-align: center;
+    text-align: left;
+    width: calc( 100% - 32px);
   }
   .is-sticky.nav ul {
     float: none;
+    padding: 0px;
   }
 }
 * {
