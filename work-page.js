@@ -19,10 +19,10 @@ function makeSubpageElement(subpageName, subpageID){
 var pageInitiallyPopulated = false;
 	
 Vue.component('work-summary', {
-  props: ["worktype", "donefor", "toolsused", "externallink", "linktext", "coverphoto", "githublinkimg","externallinkimg"],
+  props: ["dontusecoverphoto","worktype", "donefor", "toolsused", "externallink", "linktext", "coverphoto", "githublinkimg","externallinkimg"],
 
 
-template: '<div><img id="coverPhoto" src=coverphoto class="three-fourth-center box-shadow scroll-reveal">' +
+template: '<div><img v-if=!(dontusecoverphoto) id="coverPhoto" src=coverphoto class="three-fourth-center box-shadow scroll-reveal">' +
 		'<div class= "grid-container center-align details"> ' +
 			'<div class="fourth ">' +
 				'<h4>work in</h4><p v-html=worktype></p></div>'+
