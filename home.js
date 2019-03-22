@@ -80,7 +80,7 @@ $(document).ready(function(){
 				var id = $(thisLink).attr("id")
 				// console.log("id"+id);
 				//The top or bottom boundary has just scrolled into view, and its ID is not the active one
-				if ($("boundary"+"#"+id) != null) {
+				if ($("boundary"+"#"+id)[0] !=null) {
 					if ((isScrolledIntoView($("boundary"+"#"+id)[0]) || isScrolledIntoView($("boundary"+"#"+id)[1]))  && id != activeHeaderId){
 						// console.log("test");
 						$(".nav a").not("a#"+id).removeClass("active");
