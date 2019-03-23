@@ -27,11 +27,13 @@
 
 .hero-arrow {
   font-size: 48px;
-  left: calc( 50% - 8px);
+  position: relative;
+  top: 40px;
+  /*	    left: calc( 50% - 8px);*/
   /* left: 50%;
    right: 50%;*/
-  top: 630px;
-  position: absolute;
+  /*	    top: 630px;
+  	    position: absolute;*/
   opacity: 0;
   transition: 0.6s opacity;
 }
@@ -716,8 +718,11 @@ input:checked + .slider:before {
   section.hero {
     padding-top: 0px;
   }
+  section.hero .text-wrapper {
+    height: 180px;
+  }
   section.hero h2 {
-    margin: 24px auto;
+    margin: 0px auto;
   }
 
   section#about {
@@ -788,6 +793,12 @@ input:checked + .slider:before {
     padding: 0px;
   }
 
+  .home .nav:not(.is-sticky) .nav-wrapper {
+    width: 100%;
+  }
+  .home .nav:not(.is-sticky) ul {
+    padding-left: 0px !important;
+  }
   .home .is-sticky.nav ul {
     display: none !important;
   }
