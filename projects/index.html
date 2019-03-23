@@ -100,7 +100,7 @@ $(document).ready(function(){
 	<div class=" grid-container scroll-reveal"  v-for="projEntry in sortedProjects">
 		<!-- <project-element v-bind:proj-entry=projectEntry></project-element> -->
 
-		<div class="projectElement  five-twelth">
+		<div class="projectElement  last five-twelth">
 			<a target="_blank" v-if="projEntry.fields.slug.includes('http')"  v-bind:href="projEntry.fields.slug">
 			<div class="img-container box-shadow" v-bind:style="'background-image:url(' + projEntry.fields.coverphoto.fields.file.url+ ')'">
 				<div class="title"><div class="overlay"><div class="title-text">{{projEntry.fields.workTitle}}</div></div></div>
