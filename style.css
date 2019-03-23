@@ -793,6 +793,9 @@ input:checked + .slider:before {
     padding: 0px;
   }
 
+  .home .nav:not(.is-sticky) .nav-name {
+    display: none !important;
+  }
   .home .nav:not(.is-sticky) .nav-wrapper {
     width: 100%;
   }
