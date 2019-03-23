@@ -762,7 +762,6 @@ input:checked + .slider:before {
     right: 0px;
   }
   .nav:not(.singlePage, .project-page) .nav-name {
-    display: block !important;
     /*display:none !important;*/
     left: 0px;
     padding-left: 0px !important;
@@ -799,6 +798,9 @@ input:checked + .slider:before {
   }
   .home .nav:not(.is-sticky) ul {
     padding-left: 0px !important;
+  }
+  .home .is-sticky.nav .nav-name {
+    display: block !important;
   }
   .home .is-sticky.nav ul {
     display: none !important;
