@@ -103,6 +103,8 @@ function populatePage(entryId){
 
 
 		function loadMainPage(){
+			//Include elements that are only part of main page
+			$("#only-main-page").show();
 			projectPage.descriptionContents = projectPage.description;
 			
 		}
@@ -110,6 +112,7 @@ function populatePage(entryId){
 		function loadSubpage(subpageId){
 			var subpageDetail = subPages[subpageId];
 			projectPage.descriptionContents = subpageDetail;
+			$("#only-main-page").hide();
 		}
 
 

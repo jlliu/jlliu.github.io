@@ -79,6 +79,7 @@ $(document).ready(function(){
 	<workpage-nav v-bind:work=workTitle v-bind:subpage=hasSubpage></workpage-nav>
 
 	<section>
+		<div id="only-main-page">
 		<div class="center-align">
 			<h1 class="title">Girls Who Code</h1>
 			<div class="background gwc-bg"></div>
@@ -90,8 +91,8 @@ $(document).ready(function(){
 
 		<div class="">
 				<img src="/img/gwcpreview.png" class="scroll-reveal full hover-raise gwc-preview" style="visibility: visible;">
-				<work-summary dontusecoverphoto=true v-bind:worktype=workType v-bind:donefor=doneFor v-bind:toolsUsed=toolsUsed externallink="http://girlswhocode.com" v-bind:externallinkimg=true linktext="Girls Who Code"></work-summary>
-					
+				<work-summary dontusecoverphoto=true v-bind:worktype=workType v-bind:donefor=doneFor v-bind:toolsUsed=toolsUsed externallink="http://girlswhocode.com" v-bind:externallinkimg=true linktext="Girls Who Code"></work-summary>			
+		</div>
 		</div>
 
 
