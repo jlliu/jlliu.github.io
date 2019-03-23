@@ -697,7 +697,7 @@ input:checked + .slider:before {
     width: 100%;
   }
 
-  .third, .half, .full, .whole, .two-third, .five-twelth, .seven-twelth, .three-fourth {
+  .third, .fourth, .half, .full, .whole, .two-third, .five-twelth, .seven-twelth, .three-fourth, .bigger, .third, .two-third, .half, .whole, .fourth {
     /*width:calc(100% - 16px);
     margin:24px $marginWidth;*/
     grid-column: span 12;
@@ -756,7 +756,8 @@ input:checked + .slider:before {
     right: 0px;
   }
   .nav:not(.singlePage, .project-page) .nav-name {
-    display: none !important;
+    display: block !important;
+    /*display:none !important;*/
     left: 0px;
     padding-left: 0px !important;
   }
